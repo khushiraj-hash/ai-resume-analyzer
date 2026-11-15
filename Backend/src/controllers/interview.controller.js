@@ -18,6 +18,8 @@ async function generateInterViewReportController(req, res) {
         selfDescription,
         jobDescription
     })
+    console.log("AI RESPONSE:", interViewReportByAi)
+    console.log("AI TITLE:", interViewReportByAi.title)
 
     const interviewReport = await interviewReportModel.create({
         user: req.user.id,
